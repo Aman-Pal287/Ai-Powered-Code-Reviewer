@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#0f172a]/70 border-b border-gray-700/50">
+        <header className="fixed  top-0 left-0 w-full z-50 backdrop-blur-md bg-[#0f172a]/70 border-b border-gray-700/50">
             <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
                 {/* Logo */}
                 <div className="flex items-center gap-2 text-xl font-bold text-white">
@@ -22,7 +23,7 @@ const Navbar = () => {
 
                 {/* Right Side Buttons */}
                 <div className="hidden md:flex items-center gap-4">
-                    <button className="text-gray-300 hover:text-cyan-400 transition">Login</button>
+                    <NavLink to="/auth/login" className="text-gray-300 hover:text-cyan-400 transition">Login</NavLink>
                     <button className="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-black font-medium rounded-md transition">
                         Get Started
                     </button>
